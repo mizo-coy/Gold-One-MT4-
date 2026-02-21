@@ -442,23 +442,21 @@ export default function HomePage() {
             {/* Exclusive Offer Card */}
             <div className="relative mb-8">
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 rounded-2xl blur-md opacity-50 animate-pulse"></div>
-              <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-2xl p-6 shadow-2xl">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center shadow-lg">
-                      <Sparkles className="h-8 w-8 text-white" />
+              <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-2xl p-4 sm:p-6 shadow-2xl">
+                <div className="flex flex-row items-center justify-between gap-3 flex-wrap">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center shadow-lg flex-shrink-0">
+                      <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                     </div>
-                    <div className="text-left">
-                      <div className="flex items-center gap-2">
-                        <span className="text-amber-400 text-xs font-bold uppercase tracking-wider">Exclusive Offer</span>
-                        <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">25% OFF</span>
-                      </div>
-                      <p className="text-white font-bold text-xl">Save $25 Today Only!</p>
-                      <p className="text-gray-400 text-sm">Get Pro Version for just $75 instead of $100</p>
+                    <div className="flex flex-row items-center gap-2 sm:gap-4 flex-wrap">
+                      <span className="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-wider whitespace-nowrap">Exclusive Offer</span>
+                      <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse whitespace-nowrap">25% OFF</span>
+                      <span className="text-white font-bold text-base sm:text-xl whitespace-nowrap">Save $25!</span>
+                      <span className="text-gray-400 text-xs sm:text-sm hidden md:inline">Get Pro for $75</span>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center">
-                    <span className="text-gray-400 text-xs mb-1">Offer ends in:</span>
+                  <div className="flex flex-row items-center gap-2 flex-shrink-0">
+                    <span className="text-gray-400 text-xs">Ends in:</span>
                     <CountdownTimer variant="compact" />
                   </div>
                 </div>
