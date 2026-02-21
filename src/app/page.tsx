@@ -439,12 +439,30 @@ export default function HomePage() {
               Get precise entry signals, smart risk management, and maximize your gold trading profits.
             </p>
 
-            {/* Discount Banner */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg mb-8 shadow-lg">
-              <span className="text-sm font-medium">🔥 LIMITED TIME:</span>
-              <span className="font-bold text-lg">25% OFF</span>
-              <span className="text-sm">Save $25 Today!</span>
-              <CountdownTimer variant="compact" />
+            {/* Exclusive Offer Card */}
+            <div className="relative mb-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 rounded-2xl blur-md opacity-50 animate-pulse"></div>
+              <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-2xl p-6 shadow-2xl">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center shadow-lg">
+                      <Sparkles className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <div className="flex items-center gap-2">
+                        <span className="text-amber-400 text-xs font-bold uppercase tracking-wider">Exclusive Offer</span>
+                        <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">25% OFF</span>
+                      </div>
+                      <p className="text-white font-bold text-xl">Save $25 Today Only!</p>
+                      <p className="text-gray-400 text-sm">Get Pro Version for just $75 instead of $100</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-gray-400 text-xs mb-1">Offer ends in:</span>
+                    <CountdownTimer variant="compact" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* CTA Buttons */}
