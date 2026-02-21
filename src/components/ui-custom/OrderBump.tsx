@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { Sparkles, Check, Zap, Gift } from "lucide-react";
+import { Check, Zap, Gift } from "lucide-react";
 
 interface OrderBumpProps {
   checked: boolean;
@@ -16,14 +14,6 @@ interface OrderBumpProps {
 export function OrderBump({ checked, onCheckedChange, className = "" }: OrderBumpProps) {
   return (
     <Card className={`relative overflow-hidden border-2 ${checked ? 'border-amber-500 bg-amber-50/50 dark:bg-amber-950/20' : 'border-dashed border-amber-500/50 hover:border-amber-500'} transition-all ${className}`}>
-      {/* Badge */}
-      <div className="absolute -top-0 -right-0">
-        <Badge className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-none rounded-bl-lg">
-          <Sparkles className="h-3 w-3 mr-1" />
-          EXCLUSIVE OFFER
-        </Badge>
-      </div>
-
       <div className="p-4">
         <div className="flex items-start gap-4">
           <Checkbox
@@ -40,9 +30,9 @@ export function OrderBump({ checked, onCheckedChange, className = "" }: OrderBum
               <div className="flex items-center gap-2 mb-2">
                 <Gift className="h-5 w-5 text-amber-500" />
                 <span className="font-semibold">Add Premium Trading Signals Package</span>
-                <Badge variant="outline" className="text-green-600 border-green-600">
+                <span className="text-xs px-2 py-0.5 rounded border border-green-600 text-green-600">
                   SAVE $50
-                </Badge>
+                </span>
               </div>
               
               <p className="text-sm text-muted-foreground mb-3">
