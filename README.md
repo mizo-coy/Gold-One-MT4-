@@ -1,141 +1,303 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# Gold One MT4 - Professional Trading Indicator Website
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+<p align="center">
+  <img src="public/gold-logo.png" alt="Gold One MT4 Logo" width="120" height="120">
+</p>
 
-## ✨ Technology Stack
+<p align="center">
+  <strong>The Ultimate Gold Trading Indicator for MetaTrader 4</strong>
+</p>
 
-This scaffold provides a robust foundation built with:
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#license">License</a>
+</p>
 
-### 🎯 Core Framework
-- **⚡ Next.js 16** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+---
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+## About
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+This is the official website for **Gold One MT4**, a professional-grade trading indicator designed specifically for gold (XAUUSD) trading on MetaTrader 4 platform. The website showcases the product features, documentation, pricing, and provides a seamless checkout experience.
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Fetch** - Promise-based HTTP request
+### Key Highlights
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+- **87% Success Rate** - Advanced algorithm with proven accuracy
+- **10,000+ Active Traders** - Trusted by traders worldwide
+- **Multi-Timeframe Analysis** - Trade with the trend across all timeframes
+- **Smart Risk Management** - Built-in stop-loss and take-profit recommendations
+- **Real-time Alerts** - Never miss a trading opportunity
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+---
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+## Features
 
-## 🎯 Why This Scaffold?
+### Website Features
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+- **Responsive Design** - Fully responsive and optimized for all devices
+- **Modern UI/UX** - Clean, professional design with gold-themed aesthetics
+- **Dark/Light Mode** - Toggle between themes for comfortable viewing
+- **Interactive Components** - Countdown timer, testimonials carousel, FAQ accordion
+- **RTL Support** - Full support for right-to-left languages (Arabic)
+- **SEO Optimized** - Structured for search engine visibility
 
-## 🚀 Quick Start
+### Product Features
+
+| Feature | Description |
+|---------|-------------|
+| Precision Entry Signals | Advanced algorithm identifies optimal entry points |
+| Smart Risk Management | Built-in SL/TP with calculated risk-reward ratios |
+| Trend Analysis | Multi-timeframe trend detection |
+| Instant Alerts | Real-time notifications on MT4 |
+| Market Scanner | Automatic scanning for high-probability setups |
+| Session Optimization | Optimized for London and New York sessions |
+
+---
+
+## Pages & Sections
+
+The website is a single-page application with the following sections:
+
+1. **Hero Section** - Main landing with CTA buttons and stats
+2. **Features Section** - Detailed product features
+3. **How It Works** - 3-step process guide
+4. **Documentation** - Tabbed interface with installation, usage, settings, strategies, and FAQ
+5. **Testimonials** - Customer reviews carousel
+6. **Pricing** - Free vs Pro comparison with detailed feature table
+7. **Checkout** - Order form with Order Bump upsell
+8. **Free Download** - Lead capture for free version
+9. **FAQ** - Comprehensive frequently asked questions
+10. **Trust Badges** - Security and trust indicators
+
+---
+
+## Demo
+
+### Live Preview
+
+Visit the live website to see the full experience.
+
+### Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+#### Hero Section
+![Hero](screenshots/hero.png)
+
+#### Features Section
+![Features](screenshots/features.png)
+
+#### Pricing Section
+![Pricing](screenshots/pricing.png)
+
+#### Checkout Section
+![Checkout](screenshots/checkout.png)
+
+</details>
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Node.js 18.0 or higher
+- npm, yarn, pnpm, or bun
+
+### Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/mizo-coy/Gold-One-MT4-.git
+
+# Navigate to project directory
+cd Gold-One-MT4-
+
 # Install dependencies
 bun install
 
 # Start development server
 bun run dev
+```
 
-# Build for production
+### Build for Production
+
+```bash
+# Build the application
 bun run build
 
 # Start production server
-bun start
+bun run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+### Environment Variables
 
-## 🤖 Powered by Z.ai
+Create a `.env.local` file in the root directory:
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
-
+```env
+# Add any required environment variables
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
-```
-
-## 🎨 Available Features & Components
-
-This scaffold includes a comprehensive set of modern web development tools:
-
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
-
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
-
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
-
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Fetch + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+## Technologies
+
+### Frontend
+
+- **[Next.js 15](https://nextjs.org/)** - React framework with App Router
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[shadcn/ui](https://ui.shadcn.com/)** - Beautiful UI components
+- **[Lucide Icons](https://lucide.dev/)** - Beautiful open-source icons
+
+### Fonts
+
+- **[Cairo](https://fonts.google.com/specimen/Cairo)** - Multilingual font supporting Arabic and English
+
+### Features & Libraries
+
+- **next-themes** - Dark/Light mode support
+- **React Hooks** - useState, useEffect, useCallback
+- **CSS Gradients** - Custom gold gradient effects
+- **Responsive Design** - Mobile-first approach
+
+---
+
+## Project Structure
+
+```
+gold-one-mt4/
+├── public/
+│   ├── gold-logo.png
+│   ├── logo.svg
+│   └── robots.txt
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   └── Footer.tsx
+│   │   ├── ui/
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   └── ... (other UI components)
+│   │   └── ui-custom/
+│   │       ├── CountdownTimer.tsx
+│   │       ├── FAQSection.tsx
+│   │       ├── OrderBump.tsx
+│   │       ├── TestimonialsCarousel.tsx
+│   │       └── TrustBadges.tsx
+│   ├── hooks/
+│   │   ├── use-mobile.ts
+│   │   └── use-toast.ts
+│   └── lib/
+│       ├── db.ts
+│       └── utils.ts
+├── tailwind.config.ts
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
+```
+
+---
+
+## Customization
+
+### Colors
+
+The website uses a gold-themed color palette. Customize in `tailwind.config.ts`:
+
+```javascript
+// Primary gold colors
+colors: {
+  gold: {
+    50: '#FFFBEB',
+    100: '#FEF3C7',
+    // ... custom gold shades
+    500: '#D4AF37', // Primary gold
+    600: '#FFD700', // Bright gold
+  }
+}
+```
+
+### Typography
+
+The website uses the Cairo font. Modify in `src/app/layout.tsx`:
+
+```javascript
+const inter = Cairo({
+  subsets: ['arabic', 'latin'],
+  // ... other options
+});
+```
+
+### Content
+
+Update product information, pricing, and content in `src/app/page.tsx`:
+
+- `stats` - Statistics array
+- `features` - Features array
+- `comparisonData` - Pricing comparison
+- `faqItems` - FAQ questions and answers
+
+---
+
+## Payment Integration
+
+The website includes UI for payment methods:
+
+- **Stripe** - Credit card payments
+- **PayPal** - Fast checkout
+
+To integrate actual payments, you'll need to:
+
+1. Create Stripe/PayPal accounts
+2. Add API keys to environment variables
+3. Create API routes for payment processing
+4. Update checkout form to handle submissions
+
+---
+
+## Links
+
+### Store Links
+
+- **Website**: [InfinityAlgo Academy](https://infinityalgoacademy.net)
+- **Free Download**: [Gold One MT4 Free](https://infinityalgoacademy.net/item/gold-one-mt4-free-download/)
+- **Checkout**: [Buy Gold One MT4](https://infinityalgoacademy.net/checkout/?fct_cart_hash=cf75fe51160b7ecd43e2e0a234909671)
+
+### Payment Methods
+
+- Stripe
+- PayPal
+
+---
+
+## Support
+
+For support, please visit [InfinityAlgo Academy](https://infinityalgoacademy.net) or contact us through the website.
+
+---
+
+## License
+
+This project is proprietary software. All rights reserved by **InfinityAlgo Academy**.
+
+---
+
+<p align="center">
+  <strong>InfinityAlgo Academy</strong><br>
+  <em>Professional Trading Tools for Serious Traders</em>
+</p>
+
+<p align="center">
+  Copyright © 2025 InfinityAlgo Academy. All rights reserved.
+</p>

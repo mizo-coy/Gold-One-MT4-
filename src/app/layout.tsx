@@ -1,37 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "next-themes";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const cairo = Cairo({
+  variable: "--font-cairo",
+  subsets: ["arabic", "latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Gold One MT4 - The Ultimate Gold Trading Indicator | InfinityAlgo Academy",
+  description: "Professional MT4 indicator for gold trading. Get accurate buy/sell signals, smart entry points, and maximize your trading profits with Gold One MT4.",
+  keywords: ["Gold Trading", "MT4 Indicator", "Forex", "XAUUSD", "Trading Signals", "Gold One", "InfinityAlgo Academy"],
+  authors: [{ name: "InfinityAlgo Academy" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/gold-logo.png",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Gold One MT4 - The Ultimate Gold Trading Indicator",
+    description: "Professional MT4 indicator for gold trading with 87% accuracy rate.",
+    url: "https://infinityalgoacademy.net",
+    siteName: "InfinityAlgo Academy",
     type: "website",
+    images: ["/gold-logo.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Gold One MT4 - The Ultimate Gold Trading Indicator",
+    description: "Professional MT4 indicator for gold trading with 87% accuracy rate.",
+    images: ["/gold-logo.png"],
   },
 };
 
@@ -43,10 +42,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${cairo.variable} font-sans antialiased bg-background text-foreground`}
       >
-        {children}
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
