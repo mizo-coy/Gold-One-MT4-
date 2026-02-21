@@ -370,6 +370,35 @@ const docsFaq = [
   },
 ];
 
+// Static candlestick data for charts (fixes hydration issues)
+const candlestickData1 = [
+  { height: 45, margin: 12 }, { height: 32, margin: 25 }, { height: 58, margin: 8 },
+  { height: 28, margin: 35 }, { height: 52, margin: 15 }, { height: 38, margin: 28 },
+  { height: 65, margin: 5 }, { height: 42, margin: 22 }, { height: 35, margin: 30 },
+  { height: 55, margin: 10 }, { height: 48, margin: 18 }, { height: 30, margin: 38 },
+  { height: 62, margin: 7 }, { height: 40, margin: 26 }, { height: 50, margin: 14 },
+  { height: 36, margin: 32 }, { height: 58, margin: 9 }, { height: 44, margin: 20 },
+  { height: 52, margin: 16 }, { height: 38, margin: 28 }
+];
+
+const candlestickData2 = [
+  { height: 35, margin: 20 }, { height: 28, margin: 30 }, { height: 42, margin: 15 },
+  { height: 50, margin: 8 }, { height: 32, margin: 28 }, { height: 45, margin: 12 },
+  { height: 38, margin: 25 }, { height: 55, margin: 5 }, { height: 30, margin: 32 },
+  { height: 48, margin: 10 }, { height: 52, margin: 7 }, { height: 60, margin: 3 },
+  { height: 65, margin: 2 }, { height: 58, margin: 5 }, { height: 70, margin: 1 },
+  { height: 62, margin: 4 }, { height: 55, margin: 8 }, { height: 68, margin: 2 }
+];
+
+const candlestickData3 = [
+  { height: 40, margin: 25 }, { height: 55, margin: 10 }, { height: 32, margin: 30 },
+  { height: 48, margin: 15 }, { height: 60, margin: 5 }, { height: 38, margin: 22 },
+  { height: 52, margin: 12 }, { height: 45, margin: 18 }, { height: 68, margin: 3 },
+  { height: 42, margin: 20 }, { height: 58, margin: 8 }, { height: 35, margin: 28 },
+  { height: 65, margin: 4 }, { height: 50, margin: 14 }, { height: 72, margin: 2 },
+  { height: 55, margin: 10 }
+];
+
 export default function HomePage() {
   const [orderBumpChecked, setOrderBumpChecked] = useState(false);
   const [checkoutEmail, setCheckoutEmail] = useState("");
@@ -544,13 +573,13 @@ export default function HomePage() {
                   
                   {/* Candlestick Pattern */}
                   <div className="flex items-end gap-1 h-32 mb-2">
-                    {Array.from({ length: 20 }).map((_, i) => (
+                    {candlestickData1.map((candle, i) => (
                       <div key={i} className="flex flex-col items-center flex-1">
                         <div 
                           className={`w-full ${i % 3 === 0 ? 'bg-green-500' : 'bg-red-500'} rounded-sm`}
                           style={{ 
-                            height: `${Math.random() * 60 + 20}px`,
-                            marginTop: `${Math.random() * 40}px`
+                            height: `${candle.height}px`,
+                            marginTop: `${candle.margin}px`
                           }}
                         />
                       </div>
@@ -631,13 +660,13 @@ export default function HomePage() {
                   
                   {/* Candlesticks */}
                   <div className="flex items-end gap-1 h-28 mt-8">
-                    {Array.from({ length: 18 }).map((_, i) => (
+                    {candlestickData2.map((candle, i) => (
                       <div key={i} className="flex flex-col items-center flex-1">
                         <div 
                           className={`w-full ${i > 10 ? 'bg-green-500' : 'bg-red-500'} rounded-sm`}
                           style={{ 
-                            height: `${Math.random() * 50 + 15}px`,
-                            marginTop: `${Math.random() * 30}px`
+                            height: `${candle.height}px`,
+                            marginTop: `${candle.margin}px`
                           }}
                         />
                       </div>
@@ -694,13 +723,13 @@ export default function HomePage() {
                   
                   {/* Price Action */}
                   <div className="flex items-end gap-1.5 h-36 mt-10">
-                    {Array.from({ length: 16 }).map((_, i) => (
+                    {candlestickData3.map((candle, i) => (
                       <div key={i} className="flex flex-col items-center flex-1">
                         <div 
                           className={`w-full ${i % 2 === 0 ? 'bg-green-500' : 'bg-red-500'} rounded-sm`}
                           style={{ 
-                            height: `${Math.random() * 70 + 20}px`,
-                            marginTop: `${Math.random() * 30}px`
+                            height: `${candle.height}px`,
+                            marginTop: `${candle.margin}px`
                           }}
                         />
                       </div>
