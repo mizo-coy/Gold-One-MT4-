@@ -510,6 +510,243 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trading Showcase Section */}
+      <section className="py-20 bg-gradient-to-b from-background via-gray-950 to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-white">
+              <TrendingUp className="h-3 w-3 mr-1" />
+              Real Trading Results
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              See <span className="text-gold-gradient">Gold One MT4</span> in Action
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Experience the power of our professional trading indicator with real market examples
+            </p>
+          </div>
+
+          {/* Trading Images Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Chart Screenshot 1 */}
+            <Card className="overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 border-amber-500/20">
+              <div className="relative aspect-video bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+                {/* Simulated Trading Chart */}
+                <div className="absolute inset-0 p-4">
+                  {/* Chart Header */}
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-amber-500 animate-pulse" />
+                      <span className="text-amber-400 text-sm font-mono">XAUUSD</span>
+                    </div>
+                    <span className="text-green-500 text-sm font-bold">+127.5 pips</span>
+                  </div>
+                  
+                  {/* Candlestick Pattern */}
+                  <div className="flex items-end gap-1 h-32 mb-2">
+                    {Array.from({ length: 20 }).map((_, i) => (
+                      <div key={i} className="flex flex-col items-center flex-1">
+                        <div 
+                          className={`w-full ${i % 3 === 0 ? 'bg-green-500' : 'bg-red-500'} rounded-sm`}
+                          style={{ 
+                            height: `${Math.random() * 60 + 20}px`,
+                            marginTop: `${Math.random() * 40}px`
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Buy Signal Arrow */}
+                  <div className="absolute bottom-16 left-8">
+                    <div className="relative">
+                      <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-b-[16px] border-l-transparent border-r-transparent border-b-green-500 animate-bounce" />
+                      <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-green-400 text-xs font-bold whitespace-nowrap">BUY</span>
+                    </div>
+                  </div>
+                  
+                  {/* TP Lines */}
+                  <div className="absolute top-12 right-4 left-4">
+                    <div className="border-t-2 border-dashed border-green-500/50 relative">
+                      <span className="absolute -top-3 right-0 text-green-400 text-xs">TP3</span>
+                    </div>
+                  </div>
+                  <div className="absolute top-20 right-4 left-4">
+                    <div className="border-t-2 border-dashed border-green-500/50 relative">
+                      <span className="absolute -top-3 right-0 text-green-400 text-xs">TP2</span>
+                    </div>
+                  </div>
+                  <div className="absolute top-28 right-4 left-4">
+                    <div className="border-t-2 border-dashed border-green-500/50 relative">
+                      <span className="absolute -top-3 right-0 text-green-400 text-xs">TP1</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div>
+                    <p className="text-white font-semibold">Perfect Entry Signal</p>
+                    <p className="text-amber-400 text-sm">87% Accuracy Rate</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-4 bg-gray-950">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400 text-sm">Buy Signal - M15</span>
+                  <Badge className="bg-green-500/20 text-green-400 border-green-500/30">WIN</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Chart Screenshot 2 */}
+            <Card className="overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 border-amber-500/20">
+              <div className="relative aspect-video bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+                <div className="absolute inset-0 p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-amber-500 animate-pulse" />
+                      <span className="text-amber-400 text-sm font-mono">XAUUSD</span>
+                    </div>
+                    <span className="text-green-500 text-sm font-bold">+89.3 pips</span>
+                  </div>
+                  
+                  {/* Trend Line */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200">
+                    <path
+                      d="M 20 150 Q 100 140 150 100 T 280 60 T 380 40"
+                      fill="none"
+                      stroke="url(#goldGradient)"
+                      strokeWidth="3"
+                      className="animate-pulse"
+                    />
+                    <defs>
+                      <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#fbbf24" />
+                        <stop offset="50%" stopColor="#f59e0b" />
+                        <stop offset="100%" stopColor="#d97706" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  
+                  {/* Candlesticks */}
+                  <div className="flex items-end gap-1 h-28 mt-8">
+                    {Array.from({ length: 18 }).map((_, i) => (
+                      <div key={i} className="flex flex-col items-center flex-1">
+                        <div 
+                          className={`w-full ${i > 10 ? 'bg-green-500' : 'bg-red-500'} rounded-sm`}
+                          style={{ 
+                            height: `${Math.random() * 50 + 15}px`,
+                            marginTop: `${Math.random() * 30}px`
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Sell Signal */}
+                  <div className="absolute top-12 right-16">
+                    <div className="relative">
+                      <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[16px] border-l-transparent border-r-transparent border-t-red-500 animate-bounce" />
+                      <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-red-400 text-xs font-bold whitespace-nowrap">SELL</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div>
+                    <p className="text-white font-semibold">Trend Following Strategy</p>
+                    <p className="text-amber-400 text-sm">Multi-Timeframe Analysis</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-4 bg-gray-950">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400 text-sm">Sell Signal - H1</span>
+                  <Badge className="bg-green-500/20 text-green-400 border-green-500/30">WIN</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Chart Screenshot 3 */}
+            <Card className="overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 border-amber-500/20">
+              <div className="relative aspect-video bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+                <div className="absolute inset-0 p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-amber-500 animate-pulse" />
+                      <span className="text-amber-400 text-sm font-mono">XAUUSD</span>
+                    </div>
+                    <span className="text-green-500 text-sm font-bold">+156.8 pips</span>
+                  </div>
+                  
+                  {/* Support/Resistance Lines */}
+                  <div className="absolute top-8 right-4 left-4">
+                    <div className="border-t-2 border-amber-500/70 relative">
+                      <span className="absolute -top-3 left-2 text-amber-400 text-xs">Resistance</span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-20 right-4 left-4">
+                    <div className="border-t-2 border-amber-500/70 relative">
+                      <span className="absolute -top-3 left-2 text-amber-400 text-xs">Support</span>
+                    </div>
+                  </div>
+                  
+                  {/* Price Action */}
+                  <div className="flex items-end gap-1.5 h-36 mt-10">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <div key={i} className="flex flex-col items-center flex-1">
+                        <div 
+                          className={`w-full ${i % 2 === 0 ? 'bg-green-500' : 'bg-red-500'} rounded-sm`}
+                          style={{ 
+                            height: `${Math.random() * 70 + 20}px`,
+                            marginTop: `${Math.random() * 30}px`
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Entry Point */}
+                  <div className="absolute bottom-24 left-12">
+                    <div className="w-4 h-4 rounded-full bg-amber-500 animate-ping absolute" />
+                    <div className="w-4 h-4 rounded-full bg-amber-500 relative" />
+                  </div>
+                </div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div>
+                    <p className="text-white font-semibold">Risk Management</p>
+                    <p className="text-amber-400 text-sm">Dynamic SL/TP Levels</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-4 bg-gray-950">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400 text-sm">Buy Signal - H4</span>
+                  <Badge className="bg-green-500/20 text-green-400 border-green-500/30">WIN</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Stats Under Images */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+            {[
+              { label: "Win Rate", value: "87%", color: "text-green-500" },
+              { label: "Avg. Profit/Trade", value: "+45 pips", color: "text-amber-500" },
+              { label: "Max Drawdown", value: "< 5%", color: "text-blue-500" },
+              { label: "Monthly Signals", value: "60-80", color: "text-purple-500" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center p-4 rounded-lg bg-gray-900/50 border border-amber-500/10">
+                <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="py-20">
         <div className="container mx-auto px-4">
