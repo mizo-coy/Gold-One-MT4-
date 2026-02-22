@@ -439,21 +439,15 @@ export default function HomePage() {
               Get precise entry signals, smart risk management, and maximize your gold trading profits.
             </p>
 
-            {/* Exclusive Offer Card */}
-            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-xl px-5 py-3 mb-8 shadow-xl">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center flex-shrink-0">
-                <Sparkles className="h-5 w-5 text-white" />
-              </div>
-              <div className="flex items-center gap-3 flex-nowrap">
-                <span className="text-amber-400 text-sm font-bold uppercase tracking-wide">Exclusive Offer</span>
-                <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">25% OFF</span>
-                <span className="text-white font-bold">Save $25!</span>
-              </div>
-              <div className="h-6 w-px bg-gray-600 hidden sm:block"></div>
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <span className="text-gray-400 text-xs">Ends:</span>
-                <CountdownTimer variant="compact" />
-              </div>
+            {/* Exclusive Offer Card - Horizontal Layout */}
+            <div className="flex flex-row items-center justify-center gap-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-full px-4 py-2 mb-8 shadow-xl mx-auto max-w-fit">
+              <Sparkles className="h-5 w-5 text-amber-400 flex-shrink-0" />
+              <span className="text-amber-400 text-sm font-bold uppercase tracking-wide whitespace-nowrap">Exclusive Offer</span>
+              <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse whitespace-nowrap">25% OFF</span>
+              <span className="text-white font-bold whitespace-nowrap">Save $25!</span>
+              <span className="text-gray-500">|</span>
+              <span className="text-gray-400 text-xs whitespace-nowrap">Ends:</span>
+              <CountdownTimer variant="compact" />
             </div>
 
             {/* CTA Buttons */}
