@@ -440,26 +440,19 @@ export default function HomePage() {
             </p>
 
             {/* Exclusive Offer Card */}
-            <div className="relative mb-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 rounded-2xl blur-md opacity-50 animate-pulse"></div>
-              <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-2xl p-4 sm:p-6 shadow-2xl">
-                <div className="flex flex-row items-center justify-between gap-3 flex-wrap">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center shadow-lg flex-shrink-0">
-                      <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-                    </div>
-                    <div className="flex flex-row items-center gap-2 sm:gap-4 flex-wrap">
-                      <span className="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-wider whitespace-nowrap">Exclusive Offer</span>
-                      <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse whitespace-nowrap">25% OFF</span>
-                      <span className="text-white font-bold text-base sm:text-xl whitespace-nowrap">Save $25!</span>
-                      <span className="text-gray-400 text-xs sm:text-sm hidden md:inline">Get Pro for $75</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-row items-center gap-2 flex-shrink-0">
-                    <span className="text-gray-400 text-xs">Ends in:</span>
-                    <CountdownTimer variant="compact" />
-                  </div>
-                </div>
+            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-xl px-5 py-3 mb-8 shadow-xl">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center flex-shrink-0">
+                <Sparkles className="h-5 w-5 text-white" />
+              </div>
+              <div className="flex items-center gap-3 flex-nowrap">
+                <span className="text-amber-400 text-sm font-bold uppercase tracking-wide">Exclusive Offer</span>
+                <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">25% OFF</span>
+                <span className="text-white font-bold">Save $25!</span>
+              </div>
+              <div className="h-6 w-px bg-gray-600 hidden sm:block"></div>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                <span className="text-gray-400 text-xs">Ends:</span>
+                <CountdownTimer variant="compact" />
               </div>
             </div>
 
