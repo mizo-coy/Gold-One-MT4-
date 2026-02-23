@@ -440,13 +440,13 @@ export default function HomePage() {
             </p>
 
             {/* Exclusive Offer Card - Horizontal Layout */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-full px-5 py-3 mb-8 shadow-xl">
-              <Sparkles className="h-5 w-5 text-amber-400" />
-              <span className="text-amber-400 text-sm font-bold uppercase tracking-wide">Exclusive Offer</span>
-              <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">25% OFF</span>
-              <span className="text-white font-bold">Save $25!</span>
-              <span className="text-gray-500 mx-1">•</span>
-              <span className="text-gray-400 text-sm">Ends:</span>
+            <div className="flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-full px-3 sm:px-5 py-2 sm:py-3 mb-8 shadow-xl mx-auto w-fit">
+              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-amber-400 shrink-0" />
+              <span className="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-wide shrink-0">Exclusive Offer</span>
+              <span className="px-2 py-0.5 sm:py-1 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse shrink-0">25% OFF</span>
+              <span className="text-white text-sm sm:text-base font-bold shrink-0">Save $25!</span>
+              <span className="text-gray-500 shrink-0">•</span>
+              <span className="text-gray-400 text-xs sm:text-sm shrink-0">Ends:</span>
               <CountdownTimer variant="compact" />
             </div>
 
