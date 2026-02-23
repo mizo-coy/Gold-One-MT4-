@@ -440,13 +440,13 @@ export default function HomePage() {
             </p>
 
             {/* Exclusive Offer Card - Horizontal Layout */}
-            <div className="flex flex-row items-center justify-center gap-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-full px-4 py-2 mb-8 shadow-xl mx-auto max-w-fit">
-              <Sparkles className="h-5 w-5 text-amber-400 flex-shrink-0" />
-              <span className="text-amber-400 text-sm font-bold uppercase tracking-wide whitespace-nowrap">Exclusive Offer</span>
-              <span className="px-2 py-0.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse whitespace-nowrap">25% OFF</span>
-              <span className="text-white font-bold whitespace-nowrap">Save $25!</span>
-              <span className="text-gray-500">|</span>
-              <span className="text-gray-400 text-xs whitespace-nowrap">Ends:</span>
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-2 border-amber-500/50 rounded-full px-5 py-3 mb-8 shadow-xl">
+              <Sparkles className="h-5 w-5 text-amber-400" />
+              <span className="text-amber-400 text-sm font-bold uppercase tracking-wide">Exclusive Offer</span>
+              <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">25% OFF</span>
+              <span className="text-white font-bold">Save $25!</span>
+              <span className="text-gray-500 mx-1">•</span>
+              <span className="text-gray-400 text-sm">Ends:</span>
               <CountdownTimer variant="compact" />
             </div>
 
